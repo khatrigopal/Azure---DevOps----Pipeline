@@ -11,5 +11,5 @@ module "resource_group" {
 }
 
 output "rg1" {
-  value = module.resource_group.resourcegroups["testingtier"].id
+  value = module.resource_group.rg1["testingtier"].name
 }
