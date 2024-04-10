@@ -8,3 +8,7 @@ module "resource_group" {
      location = "WestUS"
     },
 }
+
+output "rg1" {
+  value = module.resource_group.resource_groups["testingtier"].name
+}
