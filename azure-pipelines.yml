@@ -1,0 +1,79 @@
+trigger:
+- None
+ 
+pool:
+  vmImage: ubuntu-latest
+ 
+stages:
+- stage: 'init'
+  displayName: 'Terraform init'
+  jobs: 
+  - job: 'init'
+    displayName: 'Terraform init'
+      
+    steps:
+    
+    
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        backendServiceArm: 'IAC'
+        backendAzureRmResourceGroupName: 'rg-devops'
+        backendAzureRmStorageAccountName: 'rgdevopsstg'
+        backendAzureRmContainerName: 'azure-resource'
+        backendAzureRmKey: 'terraform.tfstate'
+      
+- stage: 'plan'
+  displayName: 'Terraform Plan'
+  dependsOn: 'init'
+  jobs: 
+  - job: 'plan'
+    displayName: 'Terraform plan'
+      
+    steps:
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        backendServiceArm: 'IAC'
+        backendAzureRmResourceGroupName: 'rg-devops'
+        backendAzureRmStorageAccountName: 'rgdevopsstg'
+        backendAzureRmContainerName: 'azure-resource'
+        backendAzureRmKey: 'terraform.tfstate'
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        environmentServiceNameAzureRM: 'IAC'
+ 
+- stage: 'apply'
+  displayName: 'Terraform apply'
+  dependsOn: 'plan'
+  jobs: 
+  - job: 'apply'
+    displayName: 'Terraform apply'
+      
+    steps:
+    - task: TerraformTaskV4@4
+      displayName: terraform-init
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        backendServiceArm: 'IAC'
+        backendAzureRmResourceGroupName: 'rg-devops'
+        backendAzureRmStorageAccountName: 'rgdevopsstg'
+        backendAzureRmContainerName: 'azure-resource'
+        backendAzureRmKey: 'terraform.tfstate'
+    - task: TerraformTaskV4@4
+      displayName: terraform-plan
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        environmentServiceNameAzureRM: 'IAC'
+    - task: TerraformTaskV4@4
+      displayName: terraform-apply
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        environmentServiceNameAzureRM: 'IAC' 
