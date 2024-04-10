@@ -6,7 +6,8 @@ module "resource_group" {
     {
      name = "testingtiger"
      location = "WestUS"
-    },
+    }
+  ]  
 }
 
 output "rg1" {
