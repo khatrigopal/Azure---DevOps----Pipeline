@@ -14,7 +14,7 @@ vnet = [
     location            = "east us"
     resource_group_name = module.resource_group.resource_group["auzretiger-rg2"].name
     address_space       = ["20.0.0.0/16"]
-  },
+  }
 ]
 
 }
