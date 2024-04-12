@@ -16,3 +16,4 @@ module "virtual-network" {
     address_space       = ["20.0.0.0/16"]
   },
 }
+}
