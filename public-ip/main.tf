@@ -7,4 +7,3 @@ resource "azurerm_public_ip" "public-ip" {
   allocation_method   = "Static"
 
   }
-}
