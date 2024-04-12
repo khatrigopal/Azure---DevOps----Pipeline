@@ -4,11 +4,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
  
-stages:
- -stage: 'tfsec'
-  displayName: 'TFSEC'
-  jobs:
-  - job: 'tfsec'
+stages: 
+-stage: 'tfsec'
+ displayName: 'TFSEC'
+ jobs:
+ - job: 'tfsec'
     displayName: 'TFSEC'
     steps:
     - task: tfsec@1
