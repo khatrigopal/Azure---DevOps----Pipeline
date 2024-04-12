@@ -7,7 +7,7 @@ publicip = {
     name                = "auzretiger-frontend-publicip1"
     location            = "east us"
     resource_group_name = module.resource_group.resource_group["auzretiger-rg1"].name
-    allocation_method =   "STATIC"
+    allocation_method =   "Static"
     
   }
 
