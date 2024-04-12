@@ -19,5 +19,5 @@ output "subnet1" {
 }
 
 output "subnet2" {
-  value =  value = module.subnet.subnets["auzretiger-backend-subnet"].name
+  value =  module.subnet.subnets["auzretiger-backend-subnet"].name
 }
