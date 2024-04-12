@@ -16,5 +16,6 @@ subnet = {
     location            = "east us"
     virtual_network_name = module.virtual-network.virtual-network["auzretiger-vnet2"].name
     address_space       = ["20.0.1.0/24"]
-  },
+  }
+}
 }
