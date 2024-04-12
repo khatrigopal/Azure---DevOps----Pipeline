@@ -7,9 +7,9 @@ output "rg2" {
 }
 
 output "vnet1" {
-  value = module.virtual-network.example["auzretiger-vnet1"].name
+  value = module.virtual-network.virtual-network["auzretiger-vnet1"].name
 }
 
 output "vnet2" {
-  value = module.virtual-network.example["auzretiger-vnet2"].name
+  value = module.virtual-network.virtual-network["auzretiger-vnet2"].name
 }
