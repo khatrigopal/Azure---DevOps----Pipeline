@@ -15,7 +15,7 @@ output "vnet2" {
 }
 
 output "subnet1" {
-  value = module.subnet.subnets["auzretiger-frontend-subnet"].name
+  value = module.subnet.subnets["auzretiger-fronted-subnet"].name
 }
 
 output "subnet2" {
