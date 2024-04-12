@@ -1,3 +1,3 @@
-variable "association_map" {
+variable "nsg-map" {
  type = map(any)
 }
