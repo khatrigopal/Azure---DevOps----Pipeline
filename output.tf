@@ -14,12 +14,20 @@ output "vnet2" {
   value = module.virtual-network.virtual-network["auzretiger-vnet2"].name
 }
 
-output "subnet1" {
+output "frontend_subnet_name" {
   value = module.subnet.subnets["auzretiger-fronted-subnet"].name
 }
 
-output "subnet2" {
+output "backend_subnet_name" {
   value =  module.subnet.subnets["auzretiger-backend-subnet"].name
+}
+
+output "frontend_subnet_id" {
+  value = module.subnet.subnets["auzretiger-fronted-subnet"].id
+}
+
+output "backend_subnet_id" {
+  value =  module.subnet.subnets["auzretiger-backend-subnet"].id
 }
 
 output "publicip1_name" {
