@@ -1,3 +1,5 @@
+### Resource Group#####
+
 rg = {
   "rg1" = {
     name     = "auzretiger-rg1"
@@ -10,8 +12,7 @@ rg = {
 
 }
 
-module "virtual-network" {
-  source = "./virtual-network"
+## Virtual Network ###
 
 
 vnet = {
