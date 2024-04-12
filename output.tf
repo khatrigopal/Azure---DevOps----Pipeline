@@ -13,3 +13,11 @@ output "vnet1" {
 output "vnet2" {
   value = module.virtual-network.virtual-network["auzretiger-vnet2"].name
 }
+
+output "subnet1" {
+  value = module.subnet.subnets["auzretiger-frontend-subnet"].name
+}
+
+output "subnet2" {
+  value =  value = module.subnet.subnets["auzretiger-backend-subnet"].name
+}
