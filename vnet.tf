@@ -2,7 +2,7 @@ module "virtual-network" {
   source = "./virtual-network"
 
 
-  vnet = {
+vnet = {
   "Vnet1" = {
     name                = "auzretiger-vnet1"
     location            = "east us"
