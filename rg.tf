@@ -4,11 +4,11 @@ module "resource_group" {
 
   resource_group = [
     {
-     name = "testingtiger"
+     name = "auzretiger-rg1"
      location = "east us"
     },
     {
-     name = "azuretiger"
+     name = "auzretiger-rg2"
      location = "east us"
     }
   ]  
