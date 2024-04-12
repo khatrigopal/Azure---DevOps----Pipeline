@@ -37,3 +37,8 @@ output "publicip1_name" {
 output "publicip1_id" {
   value = module.public-ip.publicip["auzretiger-frontend-publicip1"].id
 }
+
+output "frontend_nic_id" {
+  value = module.nic.nic["auzretiger-frontend-nic"].id
+}
+
