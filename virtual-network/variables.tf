@@ -1,9 +1,3 @@
 variable "vnet" {
-  type = list(object({
-    name                = "string"
-    location            = "string"
-    resource_group_name = "string"
-    address_space       = "string"
-    
-  }))
+  type = map(any)
 }
