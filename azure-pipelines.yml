@@ -5,15 +5,15 @@ pool:
   vmImage: ubuntu-latest
  
 stages: 
-- stage: 'tfsec'
-  displayName: 'TFSEC'
-  jobs:
-  - job: 'tfsec'
-    displayName: 'TFSEC'
-    steps:
-    - task: tfsec@1
-      inputs:
-        debug: true 
+# - stage: 'tfsec'
+#   displayName: 'TFSEC'
+#   jobs:
+#   - job: 'tfsec'
+#     displayName: 'TFSEC'
+#     steps:
+#     - task: tfsec@1
+#       inputs:
+#         debug: true 
 
 - stage: 'init'
   displayName: 'Terraform init'
