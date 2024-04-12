@@ -8,6 +8,7 @@ nic = {
     location            = "east us"
     resource_group_name = module.resource_group.resource_group["auzretiger-rg1"].name
     subnet_id = module.subnet.subnets["auzretiger-fronted-subnet"].id
+    public_ip_address_id = module.nic.nic["auzretiger-frontend-nic"].id
   }
     
   
