@@ -42,3 +42,7 @@ output "frontend_nic_id" {
   value = module.nic.nic["auzretiger-frontend-nic"].id
 }
 
+output "frontend_nsg_id" {
+  value = module.nsg.nsg["auzretiger-frontend-nsg"].id
+}
+
