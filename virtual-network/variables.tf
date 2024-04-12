@@ -1,9 +1,9 @@
 variable "vnet" {
   type = list(object({
-    name                = each.value.name
-    location            = each.value.location
-    resource_group_name = each.value.resource_group_name
-    address_space       = each.value.address_space
+    name                = "string"
+    location            = "string"
+    resource_group_name = "string"
+    address_space       = "string"
     
   }))
 }
