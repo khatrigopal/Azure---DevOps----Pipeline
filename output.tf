@@ -22,6 +22,10 @@ output "subnet2" {
   value =  module.subnet.subnets["auzretiger-backend-subnet"].name
 }
 
-output "publicip1" {
+output "publicip1_name" {
   value = module.public-ip.publicip["auzretiger-frontend-publicip1"].name
+}
+
+output "publicip1_id" {
+  value = module.public-ip.publicip["auzretiger-frontend-publicip1"].id
 }
