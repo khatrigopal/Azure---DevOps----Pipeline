@@ -3,7 +3,7 @@ variable "vnet" {
     name   = string
     location         = string
     resource_group_name = string
-    address_space = string
+    address_space = list(string)
     
   }))
 }
